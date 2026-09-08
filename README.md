@@ -260,6 +260,47 @@ Everything you generate stays local and gitignored: `.slack-env`,
 preview. The repo ships only the scripts and the `.example` files, so a clone of
 your fork never leaks your list, your copy, or your credentials.
 
+## Common questions
+
+**How do I export a Slack member list to CSV?** That's
+`slack-member-scrape.py`. It pulls every human member of a workspace or a single
+channel into a CSV with names, handles, job titles, emails, timezones, custom
+profile fields and any LinkedIn URL in the profile.
+
+**Do I need to be a Slack admin?** No. Everything here runs on a normal member
+account, using your own browser session. That's the reason it exists — in a
+community you've joined, you will never be the admin.
+
+**Do I have to install a Slack app?** No. Installing an app needs admin
+approval you won't get in someone else's workspace. See [Getting your token and
+cookie](#getting-your-token-and-cookie) for the alternative. If you *do* have an
+approved app, an `xoxp-` token works here too.
+
+**Can I bulk DM everyone in a Slack workspace?** Technically yes, and it is
+almost always the wrong move. The whole design of this repo — dry run by
+default, a hard `MAX` per run, 25-35 seconds between sends, working-hours
+filtering — is there to push you toward 50 well-targeted DMs over 5,000 lazy
+ones. Read [Sending like a person](#sending-like-a-person) first.
+
+**Will this get my account banned?** Nothing here evades a rate limit or hides
+what it is; it sends slowly and stops when Slack says stop. The risk isn't
+technical, it's social: communities ban people for *what* they send, not how.
+Check the community rules before your first batch.
+
+**How do I get someone's email from Slack?** `users.profile.get`, which the
+deep pass calls for every member. Whether the email is there is up to the
+workspace's privacy settings — in many communities it's hidden, and in most,
+most members have no job title either.
+
+**Does it do follow-up sequences?** No, deliberately. One message, one person,
+once. If you want a 6-step sequence, this is the wrong tool and Slack is the
+wrong channel.
+
+**Can I use it for more than one community?** Yes — one `SENTLOG` per campaign
+(`SENTLOG=community-b.csv`) keeps the reply rates separately attributable.
+
+---
+
 ## License
 
 MIT — see [LICENSE](LICENSE). Do what you like with it; the responsibility for
