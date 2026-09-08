@@ -1,0 +1,16 @@
+# Copy to .slack-env, fill in, then:  source .slack-env
+# .slack-env is gitignored. Never commit the real one — these are live
+# credentials to your Slack account, not a scoped app token.
+
+# From the browser console (see README "Getting your token and cookie"),
+# or an xoxp- token if you installed a real Slack app.
+export SLACK_TOKEN='xoxc-0000000000-0000000000-000000000000-abcdef...'
+
+# The 'd' cookie. Required for xoxc- tokens only. Leave blank for xoxp-.
+export SLACK_COOKIE='xoxd-abcdef...'
+
+# Workspace ID, starts with T. Shown by the console snippet in the README.
+export SLACK_TEAM='T0123456789'
+
+# Optional: scrape one channel instead of the whole workspace.
+# export SLACK_CHANNEL='C0123456789'

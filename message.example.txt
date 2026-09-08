@@ -1,0 +1,9 @@
+Hi {first_name} — I saw you're in here and wanted to say hello properly rather
+than pitch you.
+
+I'm working on <the thing you do> and I'm trying to understand how <the
+audience> are handling <the specific problem> right now. What's your current
+setup for that?
+
+No agenda beyond the answer — happy to share what I'm seeing across other
+teams if it's useful.
