@@ -1,0 +1,27 @@
+# Secrets — never commit
+.slack-env
+.slack-env.*
+!.slack-env.example
+.env
+.env.*
+!.env.example
+
+# Your data — member lists, send logs, previews
+*.csv
+!*.example.csv
+slack-dm-preview.txt
+replies.txt
+
+# Your message copy and blocklist (yours, not the repo's)
+message.txt
+blocklist.txt
+name-overrides.json
+
+# OS / editor
+.DS_Store
+.vscode/
+*.swp
+__pycache__/
+*.pyc
+venv/
+.venv/

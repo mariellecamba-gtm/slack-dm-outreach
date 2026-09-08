@@ -1,0 +1,12 @@
+# One name per line. Anyone listed here never gets a DM, from any campaign.
+# Matched loosely on real name, display name and handle: letters only, so
+# "ada.lovelace", "Ada Lovelace" and "adalovelace" all match "Ada Lovelace".
+#
+# Copy this to blocklist.txt (gitignored) and add:
+#   - community founders, admins and moderators
+#   - anyone who has asked you not to contact them
+#   - people you already know — DM them yourself, properly
+#   - competitors you'd rather not tip off
+
+# Ada Lovelace
+# Alan Turing
